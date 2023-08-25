@@ -1,0 +1,19 @@
+{
+    "superheros" : [
+        {
+            "firstname": "bruce",
+            "lastname": "wayne",
+            "heroname": "batman"
+        },
+        {
+            "firstname": "clark",
+            "lastname": "kent",
+            "heroname": "superman"
+        },
+        {
+            "firstname": "princess",
+            "lastname": "daina",
+            "heroname": "wonder women"
+        }
+    ]
+}

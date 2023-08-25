@@ -1,0 +1,18 @@
+const fs = require("fs")
+const crypto = require("node:crypto")
+
+console.log("first")
+process.env.UV_THREADPOOL_SIZE = 5
+const MAX_CALLS = 5;
+
+const start = Date.now()
+for (let i =0; i< MAX_CALLS; i++){
+    crypto.pbkdf2("password", "salt", 100000, 512,"sha512",() => {
+        console.log(`hash: ${i + 1}`, Date.now()-start);
+    })
+}
+// fs.readFile("./file.txt","utf-8",(error, data) => {
+//   console.log("file content")
+// })
+
+// console.log("last")
